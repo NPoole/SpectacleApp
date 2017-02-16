@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+<!--Begin Twitter Card-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@sparkfun" />
+<meta name="twitter:title" content="I Shared a Spectacle Project!" />
+<meta name="twitter:description" content="Look what I made with Spectacle, SparkFun's no-download, no-programming, no-soldering maker platform!" />
+<meta name="twitter:image" content="https://npoole.github.io/SpectacleApp/icons/twitter-icon-spectacle.png" />
+<!--End Twitter Card-->
+<!--Begin Open Graph Tags-->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="I Shared a Spectacle Project!" />
+<meta property="og:description" content="Look what I made with Spectacle, SparkFun's no-download, no-programming, no-soldering maker platform!" />
+<meta property="og:image:width" content="220" />  
+<meta property="og:image:height" content="220" />  
+<meta property="og:image:type" content="image/png" />  
+<meta property="og:image" content="https://npoole.github.io/SpectacleApp/icons/og-icon-spectacle.png" />  
+<!--End Open Graph Tags--> 
+<!--Begin Windows Tile Stuff-->
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-config" content="/SpectacleApp/browserconfig.xml" />
+<!--End Windows Tile Stuff-->
+<title>Spectacle</title>
+</head>  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="FileSaver.js"></script>
+<script src='spectrum.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="icons/launcher-icon-ios-57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="icons/launcher-icon-1-5x.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="icons/launcher-icon-ios-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="icons/launcher-icon-3x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">  
+<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#ffbd91">
+<link rel='stylesheet' href='spectrum.css' />
+  
+  
+<header>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+  <div align="center" class="top-bar"><img class="logo" src="img/splogotype_50.png"></div>
+</header>
+
+<body>
+
+  <div class="menu">
+    <ul>
+      <a href="Javascript: newScript();">
+        <li>NEW SCRIPT</li>
+      </a>
+      <a href="Javascript: burgerClose(); saveCanvas();">
+        <li>SAVE SCRIPT</li>
+      </a>
+      <a href="Javascript: loadCanvas();">
+        <li>LOAD SCRIPT</li>
+      </a>
+      <a href="#">
+        <li>USER GUIDE</li>
+      </a>
+      <a href="#">
+        <li>UPDATES</li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="module-list">
+    
+    <div class="bar-lit"></div>    
+    <div class="bar-drk"></div>
+    <div class="light-module-prev"><input type="image" class="mod-label add-light" src="img/rect-add-sml.png"><input type="image" class="mod-label add-light" src="img/rect12976.png"> </div>
+    <div class="bar-drk"></div>
+    <div class="bar-lit"></div>
+    <div class="bar-drk"></div>
+    <div class="button-module-prev"><input type="image" class="mod-label add-button" src="img/rect-add-sml.png"><input type="image" class="mod-label add-button" src="img/rect12207b.png"> </div>
+    <div class="bar-drk"></div>
+    <div class="bar-lit"></div>
+    <div class="bar-drk"></div>
+    <div class="accel-module-prev"><input type="image" class="mod-label add-accel" src="img/rect-add-sml.png"><input type="image" class="mod-label add-accel" src="img/rect8398-1.png"> </div>
+    <div class="bar-drk"></div>
+    <div class="bar-lit"></div>
+    <div class="bar-drk"></div>
+    <div class="motion-module-prev"><input type="image" class="mod-label add-motion" src="img/rect-add-sml.png"><input type="image" class="mod-label add-motion" src="img/rect8398-3.png"> </div>
+    <div class="bar-drk"></div>
+    <div class="bar-lit"></div>
+    <div class="bar-drk"></div>
+    <div class="sound-module-prev"><input type="image" class="mod-label add-sound" src="img/rect-add-sml.png"><input type="image" class="mod-label add-sound" src="img/rect8398-2.png"> </div>
+    <div class="bar-drk"></div> 
+    <div class="bar-lit"></div>
+    <div class="bar-drk"></div>
+    <div class="virtual-module-prev"><input type="image" class="mod-label add-virtual" src="img/rect-add-sml.png"><input type="image" class="mod-label add-virtual" src="img/rect8398-4.png"> </div>
+    <div class="bar-drk"></div>    
+    
+  </div>
+
+  <input type="file" id="files" name="file" />
+  
+  <div class="canvas">
+    <div align="center" id="project-name-block" class="project-name-block">
+      <div id="project-name" class="project-name">Project Name</div>
+    </div>
+    <div class="project-info-module"><img class="mod-label" src="img/rect12207a.png">
+      <br>
+      <div class="project-info-module">
+      <div class="chunk">
+      <textarea id="project-decription" class="project-text" rows="2">Click here to write a little bit about your project!</textarea>
+      <br>
+      <br>
+      </div>
+      </div>
+    </div>
+    <div class="foot-spacer"></div>
+  </div>
+  
+  <div class="program-hardware">
+<br/><br/>
+    <div class="chunk" id="howtoprogram"></div>
+    <br/>
+    <br/>
+     <input type="image" src="img/g11000.png" height="40px" class="program-button">
+  </div>
+
+    <div class="share-project">
+     <div class="chunk" style="color: white; font-size: 85%">
+       <br/>
+       <h3>Share Your Project with Friends!</h3>
+       <p>Sharing projects on Spectacle is enabled through 
+       integration with Google Drive&#8482;</p>
+       
+       <p class="save-copy-authed" style="display: none"> 
+         Press the button below to save your project to Google Drive. Then use the generated
+         Spectacle Link to access this project later or share the link with friends! This link
+         will always point to this project in its current state unless you delete the file from
+         your Google Drive.</p>
+  
+       <p class="save-copy-unauthed"> 
+         Press the button below to sign in to Google Drive (or create a Google account) 
+         </p> 
+       <br/>
+       <input type="image" style="display: none;" src="img/gdsave.png" height="40px" class="save-button-authed">
+       <input type="image" src="img/gdsignin.png" height="40px" class="save-button-unauthed">
+       <div class="share-link" style="background-color:rgba(255,255,255,0.1); color: white; font-size: 100%;"></div>       
+       <br/>
+       <br/>
+       <small>Google Drive is a trademark of Google Inc. Use of this trademark is subject to Google Permissions.</small>
+       
+     </div>
+  </div>
+  
+   <div class="load-google-drive">
+     <div class="chunk" style="color: white; font-size: 85%">
+       <br/>
+       <h3>Opening a Shared Project?</h3>
+       <p>Sharing projects on Spectacle is enabled through 
+       integration with Google Drive&#8482;</p>
+       
+       <p class="load-copy-authed" style="display: none"> 
+         Press the button below to load the shared project. Beware that this
+       will overwrite any auto-saved Spectacle backups on your computer. 
+       If you'd like to skip loading this shared project and open your local
+       cache instead, exit this menu.</p>
+  
+       <p class="load-copy-unauthed"> 
+         Press the button below to sign in to Google Drive (or create a Google account)</p> 
+       <br/>
+       <input type="image" style="display: none;" src="img/gdload.png" height="40px" class="load-button-authed">
+       <input type="image" src="img/gdsignin.png" height="40px" class="load-button-unauthed">
+       <br/>
+       <br/>
+       <small>Google Drive is a trademark of Google Inc. Use of this trademark is subject to Google Permissions.</small>
+       
+     </div>
+  </div>
+  
+</body>
+
+<exit-foot>
+  <input type="image" src="img/g8667.png" height="70%" class="mod-list-exit">
+</exit-foot>
+  
+  <program-foot>
+  <input type="image" src="img/g8667.png" height="70%" class="program-pane-exit">
+ </program-foot>
+  
+    <load-foot>
+  <input type="image" src="img/g8667.png" height="70%" class="load-pane-exit">
+ </load-foot>
+
+    <share-foot>
+  <input type="image" src="img/g8667.png" height="70%" class="share-pane-exit">
+ </share-foot>
+
+  <actions-foot>
+  <input type="image" src="https://npoole.github.io/SpectacleApp/img/goback.png" height="90%" class="act-list-exit">
+  <img src="https://npoole.github.io/SpectacleApp/img/g8569.png" height="90%">
+  <input type="image" src="https://npoole.github.io/SpectacleApp/img/addaction.png" height="90%" class="add-action">
+</actions-foot>
+  
+  <blank-foot>
+  </blank-foot>
+
+<footer>
+  <input type="image" src="img/g8390.png" height="90%" class="add-module">
+  <img src="img/g8569.png" height="90%">
+  <input type="image" src="img/g8420.png" height="90%" class="config-hw">
+  <img src="img/g8569.png" height="90%">
+  <input type="image" src="img/g8531.png" height="90%" class="share-you-project">
+</footer>
+
+</html>
+
+<script src="logic.js"></script>
+  
+<link rel = "stylesheet" type = "text/css" href = "gangnam.css" />
+
+<script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
