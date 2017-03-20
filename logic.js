@@ -474,28 +474,151 @@ $(".virtual-module").insertAfter($(".canvas").children('.module').slice(-1)[0]);
 /*************** Module Prototypes ****************/
 // These prototypes are cloned into the document when a module is added to the canvas
 
+
 lightModuleProto = document.createElement("div");
-lightModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect12976.png\"><input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\"><input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">light board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list light\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #ffbd91;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'ledRainbowEffect\');\"> <li>Rainbow Effect<\/li><\/a> <a href=\"javascript:addAction(\'ledTheaterChase\');\"> <li>Theater Chase<\/li><\/a> <a href=\"javascript:addAction(\'ledScanningEffect\');\"> <li>Scanning Effect<\/li><\/a><a href=\"javascript:addAction(\'ledTwinkleEffect\');\"> <li>Twinkle Effect<\/li><\/a><a href=\"javascript:addAction(\'ledLightningEffect\');\"> <li>Lightning Effect<\/li><\/a><a href=\"javascript:addAction(\'ledFlameEffect\');\"> <li>Flame Effect<\/li><\/a><a href=\"javascript:addAction(\'ledFade\');\"> <li>Fade Lights<\/li><\/a><a href=\"javascript:addAction(\'ledFill\');\"> <li>Fill Color<\/li><\/a><a href=\"javascript:addAction(\'ledPixel\');\"> <li>Light Pixel<\/li><\/a><\/ul> <\/div>';
+lightModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect12976.png\">
+	<input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">light board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list light\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #ffbd91;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div>
+	<div class=\"chunk\">
+	<img class=\"mod-label-fixed\" width=\"30%\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">
+	<\/div>
+	<\/div>
+	<\/div>
+	<div class=\"act-menu\"> 
+	<ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'ledRainbowEffect\');\"> <li>Rainbow Effect<\/li><\/a> 
+	<a href=\"javascript:addAction(\'ledTheaterChase\');\"> <li>Theater Chase<\/li><\/a> 
+	<a href=\"javascript:addAction(\'ledScanningEffect\');\"> <li>Scanning Effect<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledTwinkleEffect\');\"> <li>Twinkle Effect<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledLightningEffect\');\"> <li>Lightning Effect<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledFlameEffect\');\"> <li>Flame Effect<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledFade\');\"> <li>Fade Lights<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledFill\');\"> <li>Fill Color<\/li><\/a>
+	<a href=\"javascript:addAction(\'ledPixel\');\"> <li>Light Pixel<\/li><\/a>
+	<\/ul> <\/div>';
 $(lightModuleProto).addClass("module light-module");
 
+
 buttonModuleProto = document.createElement("div");
-buttonModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect12207b.png\"><input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\"><input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">button board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list button\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #ffe680;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'buttonPress\');\"> <li>Action on Press<\/li><\/a> <a href=\"javascript:addAction(\'buttonRelease\');\"> <li>Action on Release<\/li><\/a> <a href=\"javascript:addAction(\'buttonClick\');\"> <li>Action on Press and Release<\/li><\/a><a href=\"javascript:addAction(\'buttonHold\');\"> <li>Action while Holding<\/li><\/a><a href=\"javascript:addAction(\'buttonLatch\');\"> <li>Latch On \/ Latch Off<\/li><\/a><\/ul> <\/div>';
+buttonModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect12207b.png\">
+	<input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">button board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list button\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #ffe680;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div><\/div>
+	<\/div>
+	<div class=\"act-menu\"> 
+	<ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'buttonPress\');\"> <li>Action on Press<\/li><\/a> 
+	<a href=\"javascript:addAction(\'buttonRelease\');\"> <li>Action on Release<\/li><\/a> 
+	<a href=\"javascript:addAction(\'buttonClick\');\"> <li>Action on Press and Release<\/li><\/a>
+	<a href=\"javascript:addAction(\'buttonHold\');\"> <li>Action while Holding<\/li><\/a>
+	<a href=\"javascript:addAction(\'buttonLatch\');\"> <li>Latch On \/ Latch Off<\/li><\/a>
+	<\/ul> <\/div>';
 $(buttonModuleProto).addClass("module button-module");
 
+
 accelModuleProto = document.createElement("div");
-accelModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-1.png\"><input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\"><input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">inertia board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list accel\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #f29595;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'inertiaMotionSense\');\"> <li>Sense All Motion<\/li><\/a> <a href=\"javascript:addAction(\'inertiaOrientationSense\');\"> <li>Sense Orientation<\/li><\/a> <a href=\"javascript:addAction(\'inertiaMeasureAccel\');\"> <li>Measure Acceleration<\/li><\/a><\/ul> <\/div>';
+accelModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-1.png\">
+	<input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">inertia board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list accel\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #f29595;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div><\/div>
+	<\/div>
+	<div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'inertiaMotionSense\');\"> <li>Sense All Motion<\/li><\/a> 
+	<a href=\"javascript:addAction(\'inertiaOrientationSense\');\"> <li>Sense Orientation<\/li><\/a> 
+	<a href=\"javascript:addAction(\'inertiaMeasureAccel\');\"> <li>Measure Acceleration<\/li><\/a>
+	<\/ul> <\/div>';
 $(accelModuleProto).addClass("module accel-module");
 
+
 motionModuleProto = document.createElement("div");
-motionModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-3.png\"><input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\"><input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">motion board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list motion\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #b9f1ab;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'motorSweep\');\"> <li>Sweep to Position<\/li><\/a> <a href=\"javascript:addAction(\'motorSweepReturn\');\"> <li>Sweep and Return<\/li><\/a> <a href=\"javascript:addAction(\'motorWag\');\"> <li>Wagging Effect<\/li><\/a><a href=\"javascript:addAction(\'motorGoto\');\"> <li>Go To Position<\/li><\/a><\/ul> <\/div>';
+motionModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-3.png\">
+	<input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">motion board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list motion\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #b9f1ab;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div><\/div>
+	<\/div>
+	<div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'motorSweep\');\"> <li>Sweep to Position<\/li><\/a> 
+	<a href=\"javascript:addAction(\'motorSweepReturn\');\"> <li>Sweep and Return<\/li><\/a> 
+	<a href=\"javascript:addAction(\'motorWag\');\"> <li>Wagging Effect<\/li><\/a>
+	<a href=\"javascript:addAction(\'motorGoto\');\"> <li>Go To Position<\/li><\/a>
+	<\/ul> <\/div>';
 $(motionModuleProto).addClass("module motion-module");
 
+
 soundModuleProto = document.createElement("div");
-soundModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-2.png\"><input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\"><input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">sound board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list sound\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #e8b5f4;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'soundPlay\');\"> <li>Play Sound<\/li><\/a> <\/ul> <\/div>';
+soundModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-2.png\">
+	<input type=\"image\" class=\"mod-label mod-up\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-up-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-dn\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-dn-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">sound board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list sound\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #e8b5f4;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div><\/div>
+	<\/div>
+	<div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'soundPlay\');\"> <li>Play Sound<\/li><\/a> 
+	<\/ul> <\/div>';
 $(soundModuleProto).addClass("module sound-module");
 
+
 virtualModuleProto = document.createElement("div");
-virtualModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div><img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-4.png\"><input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\"><input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\"><div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">virtual board<\/textarea><\/div><div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea><div class=\"actions-list virtual\"> <div class=\"mod-label\"> <img class=\"mod-label-fixed\" style=\"background-color: #f9f9f9;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\"><\/div><\/div><\/div><div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> <a href=\"javascript:addAction(\'virtualInvert\');\"> <li>Invert Filter<\/li><\/a> <a href=\"javascript:addAction(\'virtualAnd\');\"> <li>Both Active Filter<\/li><\/a> <a href=\"javascript:addAction(\'virtualOr\');\"> <li>Channel Combiner<\/li><\/a><a href=\"javascript:addAction(\'virtualXor\');\"> <li>Difference Detector<\/li><\/a><a href=\"javascript:addAction(\'virtualRandom\');\"> <li>Random Input<\/li><\/a><a href=\"javascript:addAction(\'virtualPeriodic\');\"> <li>Periodic Input<\/li><\/a><a href=\"javascript:addAction(\'virtualSustained\');\"> <li>Sustained Random Input<\/li><\/a><a href=\"javascript:addAction(\'virtualConstant\');\"> <li>Constant Input<\/li><\/a><\/ul> <\/div>';
+virtualModuleProto.innerHTML = 
+	'<div class=\"bar-drk\"><\/div>
+	<img class=\"mod-label\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect8398-4.png\">
+	<input type=\"image\" class=\"mod-label mod-del\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-x-sml.png\">
+	<input type=\"image\" class=\"mod-label mod-act\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/rect-act-sml.png\">
+	<div class=\"chunk\"><textarea id=\"mod-nick\" class=\"project-text\" style=\"font-size: 14pt\" rows=\"1\">virtual board<\/textarea><\/div>
+	<div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>
+	<div class=\"actions-list virtual\"> <div class=\"mod-label\"> 
+	<img class=\"mod-label-fixed\" style=\"background-color: #f9f9f9;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">
+	<\/div><\/div><\/div><div class=\"act-menu\"> <ul> 
+	<a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a> 
+	<a href=\"javascript:addAction(\'virtualInvert\');\"> <li>Invert Filter<\/li><\/a> 
+	<a href=\"javascript:addAction(\'virtualAnd\');\"> <li>Both Active Filter<\/li><\/a> 
+	<a href=\"javascript:addAction(\'virtualOr\');\"> <li>Channel Combiner<\/li><\/a>
+	<a href=\"javascript:addAction(\'virtualXor\');\"> <li>Difference Detector<\/li><\/a>
+	<a href=\"javascript:addAction(\'virtualRandom\');\"> <li>Random Input<\/li><\/a>
+	<a href=\"javascript:addAction(\'virtualPeriodic\');\"> <li>Periodic Input<\/li><\/a>
+	<a href=\"javascript:addAction(\'virtualSustained\');\"> <li>Sustained Random Input<\/li><\/a>
+	<a href=\"javascript:addAction(\'virtualConstant\');\"> <li>Constant Input<\/li><\/a>
+	<\/ul> <\/div>';
 $(virtualModuleProto).addClass("module virtual-module");
 
 /*************** Action Prototypes ****************/
