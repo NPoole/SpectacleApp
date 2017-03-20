@@ -196,7 +196,7 @@ function cacheSave(){
 
 function newScript() {
     var makeSure = confirm("Starting a new script will erase your current progress!\n\
-If you want to keep your progress, press Cancel and then Save or Share your project.\n\
+If you want to keep your progress, press Cancel and then Save or Share your project.\n\n\
 To start a new script, press OK.");
     if(makeSure==true){
     localStorage.setItem("cached", null);
