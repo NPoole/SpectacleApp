@@ -820,6 +820,7 @@ function addAction(actionName) {
 	var freshAction = $(newAction).clone().appendTo($(".actions-list:visible"));
 	// Get rid of the action spacer which is now in the middle of the list
 	$(".actions-list:visible").find(".action-spacer").remove();
+	$(".actions-list:visible").find(".add-reminder").remove();
 	// Toss that badboy back onto the end of the list
 	$(actionSpacer).clone().appendTo($(".actions-list:visible"));
 	var shortlist = "";
