@@ -883,7 +883,7 @@ $(document).on("change", ".color", function() {
 $(".number").val(null);
 
 $(document).on("change", ".channel", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 63) {
     $(this).val(63);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -892,7 +892,7 @@ $(document).on("change", ".channel", function() {
 });
 
 $(document).on("change", ".light-channel", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 2) {
     $(this).val(2);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -901,7 +901,7 @@ $(document).on("change", ".light-channel", function() {
 });
 
 $(document).on("change", ".light-count", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 60) {
     $(this).val(60);
   }else if(parseInt($(this).val(), 10) < 1){
@@ -910,7 +910,7 @@ $(document).on("change", ".light-count", function() {
 });
 
 $(document).on("change", ".pixel-number", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 59) {
     $(this).val(59);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -919,7 +919,7 @@ $(document).on("change", ".pixel-number", function() {
 });
 
 $(document).on("change", ".button-channel", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 8) {
     $(this).val(8);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -928,7 +928,7 @@ $(document).on("change", ".button-channel", function() {
 });
 
 $(document).on("change", ".servo-channel", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 4) {
     $(this).val(4);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -937,7 +937,7 @@ $(document).on("change", ".servo-channel", function() {
 });
 
 $(document).on("change", ".file-number", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 99) {
     $(this).val(99);
   }else if(parseInt($(this).val(), 10) < 0){
@@ -946,7 +946,7 @@ $(document).on("change", ".file-number", function() {
 });
 
 $(document).on("change", ".in-channel", function() {
-    $(this).val(Math.round($(this).val));
+    $(this).val(Math.round($(this).val()));
   if (parseInt($(this).val(), 10) > 63) {
     $(this).val(63);
   }else if(parseInt($(this).val(), 10) < 0){
