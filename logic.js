@@ -488,7 +488,7 @@ lightModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <img class=\"mod-label-fixed\" style=\"background-color: #ffbd91;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
 <\/div>\
 <div class=\"chunk\">\
-<img class=\"mod-label-fixed\" width=\"30%\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<img width=\"30%\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
 <\/div>\
 <\/div>\
 <\/div>\
