@@ -489,7 +489,7 @@ lightModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <\/div>\
 <div class=\"chunk\">\
 <br>\
-<img width=\"20%\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
 <\/div>\
 <\/div>\
 <\/div>\
