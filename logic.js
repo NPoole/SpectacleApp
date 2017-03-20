@@ -487,7 +487,7 @@ lightModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"actions-list light\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #ffbd91;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
 <\/div>\
-<div class=\"chunk\">\
+<div class=\"chunk add-reminder\">\
 <br>\
 <img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
 <\/div>\
@@ -519,7 +519,12 @@ buttonModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>\
 <div class=\"actions-list button\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #ffe680;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
-<\/div><\/div>\
+<\/div>\
+<div class=\"chunk add-reminder\">\
+<br>\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<\/div>\
+<\/div>\
 <\/div>\
 <div class=\"act-menu\">\
 <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a>\
@@ -543,7 +548,12 @@ accelModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>\
 <div class=\"actions-list accel\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #f29595;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
-<\/div><\/div>\
+<\/div>\
+<div class=\"chunk add-reminder\">\
+<br>\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<\/div>\
+<\/div>\
 <\/div>\
 <div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a>\
 <a href=\"javascript:addAction(\'inertiaMotionSense\');\"> <li>Sense All Motion<\/li><\/a>\
@@ -564,7 +574,12 @@ motionModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>\
 <div class=\"actions-list motion\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #b9f1ab;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
-<\/div><\/div>\
+<\/div>\
+<div class=\"chunk add-reminder\">\
+<br>\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<\/div>\
+<\/div>\
 <\/div>\
 <div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a>\
 <a href=\"javascript:addAction(\'motorSweep\');\"> <li>Sweep to Position<\/li><\/a>\
@@ -586,7 +601,12 @@ soundModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>\
 <div class=\"actions-list sound\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #e8b5f4;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
-<\/div><\/div>\
+<\/div>\
+<div class=\"chunk add-reminder\">\
+<br>\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<\/div>\
+<\/div>\
 <\/div>\
 <div class=\"act-menu\"> <ul> <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a>\
 <a href=\"javascript:addAction(\'soundPlay\');\"> <li>Play Sound<\/li><\/a>\
@@ -603,7 +623,14 @@ virtualModuleProto.innerHTML = '<div class=\"bar-drk\"><\/div>\
 <div class=\"chunk\"><textarea readonly id=\"mod-acts\" class=\"project-text\" rows=\"1\">No Actions Assigned<\/textarea>\
 <div class=\"actions-list virtual\"> <div class=\"mod-label\">\
 <img class=\"mod-label-fixed\" style=\"background-color: #f9f9f9;\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/actionstag.png\">\
-<\/div><\/div><\/div><div class=\"act-menu\"> <ul>\
+<\/div>\
+<div class=\"chunk add-reminder\">\
+<br>\
+<img width=\"300px\" src=\"https:\/\/npoole.github.io\/SpectacleApp\/img\/addactremind.png\">\
+<\/div>\
+<\/div>\
+<\/div>\
+<div class=\"act-menu\"> <ul>\
 <a href=\"javascript:hideActMenu();\"> <li>Cancel<\/li><\/a>\
 <a href=\"javascript:addAction(\'virtualInvert\');\"> <li>Invert Filter<\/li><\/a>\
 <a href=\"javascript:addAction(\'virtualAnd\');\"> <li>Both Active Filter<\/li><\/a>\
