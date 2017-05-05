@@ -211,7 +211,7 @@ To start a new script, press OK.");
 
 function changeName(newName){
 var ProjectName = document.getElementById('project-name');
-ProjectName.innerHTML = newName;
+ProjectName.innerHTML = escapeHtml(newName);
 }
 
 // Initialize new project with a random adjective name
@@ -1569,4 +1569,18 @@ function boardID(boardName) {
 			break;
 	}
 	return id;
+}
+
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
+// UNSAFE with unsafe strings; only use on previously-escaped ones!
+function unescapeHtml(escapedStr) {
+    var div = document.createElement('div');
+    div.innerHTML = escapedStr;
+    var child = div.childNodes[0];
+    return child ? child.nodeValue : '';
 }
